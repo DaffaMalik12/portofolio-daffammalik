@@ -41,7 +41,7 @@ function Navbar() {
               </li>
             </ul>
           </div>
-          <a className="lg:btn lg:btn-ghost lg:text-xl hidden ">
+          <a className="lg:btn lg:btn-ghost lg:text-xl hidden md:btn md:btn-ghost md:text-xl ">
             Muhammad Daffa Malik Akram
           </a>
         </div>
