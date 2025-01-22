@@ -84,7 +84,7 @@ function Portfolio() {
           {portfolioItems.map((item, index) => (
             <SwiperSlide key={item.id}>
               <div
-                className="card bg-gray-800 rounded-lg overflow-hidden shadow-lg"
+                className="card dark:bg-gray-800 bg-gray-300 rounded-lg overflow-hidden shadow-lg"
                 ref={(el) => (slideRef.current[index] = el)} // Set reference for each slide
               >
                 <img
