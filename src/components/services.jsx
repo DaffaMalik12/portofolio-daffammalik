@@ -56,7 +56,10 @@ function ServiceCards() {
   }, []);
 
   return (
-    <div id="services" className="bg-base-100 mt-12 text-white py-10">
+    <div
+      id="services"
+      className="bg-base-100 mt-12 dark:text-white text-gray-700 py-10"
+    >
       <h2 className="text-center text-3xl font-bold mb-8">Services</h2>
       <div className="mx-auto grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 px-6">
         {services.map((service, index) => (

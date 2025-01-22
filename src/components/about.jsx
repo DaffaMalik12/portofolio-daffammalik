@@ -43,10 +43,10 @@ function ComponentsAbout() {
           </div>
         </div>
         <div className="w-full px-4 lg:w-1/2 about-text">
-          <h3 className="font-semibold text-white mb-4 mt-10 text-2xl lg:text-4xl lg:pt-10">
+          <h3 className="font-semibold dark:text-white text-gray-700 mb-4 mt-10 text-2xl lg:text-4xl lg:pt-10">
             {about}
           </h3>
-          <p className="text-justify text-white font-medium mb-6 max-w-xl lg:text-lg">
+          <p className="text-justify dark:text-white text-gray-700 font-medium mb-6 max-w-xl lg:text-lg">
             {penjelasan}
           </p>
           <div className="flex items-center social-icons">

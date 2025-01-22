@@ -65,7 +65,7 @@ function Portfolio() {
   return (
     <section
       id="portofolio"
-      className="portfolio lg:py-12 bg-gradient-to-r bg-base-100 text-white"
+      className="portfolio lg:py-12 bg-gradient-to-r bg-base-100 dark:text-white text-gray-700"
     >
       <div className="container mx-auto lg:px-4">
         <h2 className="text-4xl font-bold text-center mb-8">Portfolio</h2>

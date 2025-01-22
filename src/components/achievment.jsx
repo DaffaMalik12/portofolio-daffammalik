@@ -59,7 +59,7 @@ function Achievement() {
         {/* Bagian Kiri - Konten */}
         <div className="lg:w-1/2">
           <h1 className="text-4xl font-bold mb-4">Experience</h1>
-          <p className="text-gray-400 mb-6">
+          <p className="dark:text-gray-400 text-gray-700 mb-6">
             Recognizing milestones and dedication through various achievements.
           </p>
           <div className="space-y-6">
@@ -70,7 +70,7 @@ function Achievement() {
                 </h2>
                 <div>
                   <h3 className="text-xl font-semibold">{achievement.title}</h3>
-                  <p className="text-gray-400 mt-2">
+                  <p className="dark:text-gray-400 text-gray-700 mt-2">
                     {achievement.description}
                   </p>
                 </div>

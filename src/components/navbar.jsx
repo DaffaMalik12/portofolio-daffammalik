@@ -68,7 +68,7 @@ function Navbar() {
           <a
             href="https://wa.me/6281287819593" // Ganti dengan nomor WhatsApp tujuan
             target="_blank"
-            className="btn bg-green-600 text-white"
+            className="btn bg-green-600 text-white dark:text-white"
           >
             Whatsapp 📞
           </a>
