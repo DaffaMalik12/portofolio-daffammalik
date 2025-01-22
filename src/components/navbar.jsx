@@ -41,7 +41,9 @@ function Navbar() {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Muhammad Daffa Malik Akram</a>
+          <a className="lg:btn lg:btn-ghost lg:text-xl hidden ">
+            Muhammad Daffa Malik Akram
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
