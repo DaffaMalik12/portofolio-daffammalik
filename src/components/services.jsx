@@ -65,7 +65,7 @@ function ServiceCards() {
         {services.map((service, index) => (
           <div
             key={index}
-            className="service-card flex flex-col items-center rounded-lg bg-gray-900 p-6 shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl hover:bg-gray-800"
+            className="service-card flex flex-col items-center rounded-lg dark:bg-gray-900 bg-gray-300  p-6 shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl hover:bg-gray-800"
           >
             <div className="service-icon text-5xl mb-4 transition-transform transform hover:scale-125">
               {service.icon}
@@ -74,7 +74,7 @@ function ServiceCards() {
             <ul className="text-sm space-y-2">
               {service.description.map((desc, i) => (
                 <li key={i} className="flex items-center gap-2">
-                  <span className="text-gray-400">•</span>
+                  <span className="dark:text-gray-400 text-gray-800">•</span>
                   <span>{desc}</span>
                 </li>
               ))}
