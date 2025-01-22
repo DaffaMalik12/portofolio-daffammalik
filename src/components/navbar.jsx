@@ -66,7 +66,7 @@ function Navbar() {
         </div>
         <div className="navbar-end">
           <a
-            href="https://wa.me/081287819593" // Ganti dengan nomor WhatsApp tujuan
+            href="https://wa.me/6281287819593" // Ganti dengan nomor WhatsApp tujuan
             target="_blank"
             className="btn bg-green-600 text-white"
           >
