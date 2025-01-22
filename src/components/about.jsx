@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 
 function ComponentsAbout() {
   const about = "🌟 About Me! 🌟";
-  const penjelasan = `Selamat datang di portofolio online saya! Saya adalah seorang mahasiswa UIN JAKARTA yang bersemangat dalam dunia pengembangan web dan mobile. Di situs web ini, saya membagikan proyek-proyek yang saya kerjakan baik di bidang pengembangan web maupun aplikasi mobile. Dengan latar belakang pendidikan saya dalam ilmu komputer dan hasrat saya untuk merancang serta membangun aplikasi yang menarik, saya berharap Anda dapat menemukan inspirasi dan melihat perkembangan saya sebagai pengembang web dan mobile.`;
+  const penjelasan = `Welcome to my online portfolio! I am a student of UIN JAKARTA who is passionate about web and mobile development. On this website, I share my projects in both web and mobile app development. With my educational background in computer science and my passion for designing and building engaging applications, I hope you can find inspiration and see my growth as a web and mobile developer.`;
 
   useEffect(() => {
     // Animasi GSAP untuk fade-in dan slide-in efek
