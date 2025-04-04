@@ -60,7 +60,7 @@ function Navbar() {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
-    { name: "Experience", href: "#achievment" },
+    { name: "Experience", href: "#Achievment" },
     { name: "Portfolio", href: "#portofolio" },
   ];
 

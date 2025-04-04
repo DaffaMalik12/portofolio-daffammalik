@@ -190,7 +190,7 @@ function ComponentsAbout() {
 
                 {/* Experience badge */}
                 <div className="absolute bottom-0 right-0 lg:bottom-10 lg:right-10 bg-gradient-to-r from-lime-400 to-lime-500 text-white px-4 py-2 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300">
-                  <span className="font-bold">Web & Mobile Developer</span>
+                  <span className="font-bold">Fullstack Developer</span>
                 </div>
               </div>
 
