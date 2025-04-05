@@ -178,9 +178,9 @@ function ComponentsAbout() {
 
                     {/* Actual image */}
                     <img
-                      src="img/foto-daffa-2.jpg"
+                      src="img/foto-daffa-enc.jpg"
                       alt="Daffa Malik"
-                      className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-700 ease-out"
+                      className=" object-cover scale-105 hover:scale-110 transition-transform duration-700 ease-out"
                     />
 
                     {/* Overlay gradient */}
