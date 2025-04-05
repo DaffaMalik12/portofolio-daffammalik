@@ -284,7 +284,7 @@ function Portfolio() {
     <section
       id="portofolio"
       ref={sectionRef}
-      className="py-32 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden"
+      className="py-20 md:py-32 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden"
     >
       {/* Modern animated background with particles and gradient mesh */}
       <div className="absolute inset-0 z-0">
@@ -295,15 +295,15 @@ function Portfolio() {
         {/* Modern grid lines */}
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
 
-        {/* Animated particles */}
+        {/* Animated particles - reduced for mobile */}
         <div className="particles absolute inset-0 overflow-hidden">
-          {Array.from({ length: 150 }).map((_, index) => (
+          {Array.from({ length: 80 }).map((_, index) => (
             <div
               key={index}
               className="absolute rounded-full"
               style={{
-                width: Math.random() * 6 + 1 + "px",
-                height: Math.random() * 6 + 1 + "px",
+                width: Math.random() * 4 + 1 + "px",
+                height: Math.random() * 4 + 1 + "px",
                 left: Math.random() * 100 + "%",
                 top: Math.random() * 100 + "%",
                 backgroundColor:
@@ -321,42 +321,45 @@ function Portfolio() {
         </div>
       </div>
 
-      {/* Glowing Orbs with more modern appearance */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-lime-500 rounded-full filter blur-[150px] opacity-10 animate-pulse-slow"></div>
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-yellow-500 rounded-full filter blur-[150px] opacity-10 animate-pulse-slower"></div>
+      {/* Glowing Orbs - adjusted positioning for mobile */}
+      <div className="absolute top-1/4 -left-24 w-64 md:w-96 h-64 md:h-96 bg-lime-500 rounded-full filter blur-[120px] md:blur-[150px] opacity-10 animate-pulse-slow"></div>
+      <div className="absolute bottom-1/4 -right-24 w-64 md:w-96 h-64 md:h-96 bg-yellow-500 rounded-full filter blur-[120px] md:blur-[150px] opacity-10 animate-pulse-slower"></div>
       <div
-        className="absolute top-3/4 left-1/4 w-64 h-64 bg-indigo-500 rounded-full filter blur-[120px] opacity-10 animate-pulse-slow"
+        className="absolute top-3/4 left-1/4 w-48 md:w-64 h-48 md:h-64 bg-indigo-500 rounded-full filter blur-[100px] md:blur-[120px] opacity-10 animate-pulse-slow"
         style={{ animationDelay: "3s" }}
       ></div>
 
       <div className="container mx-auto px-4 max-w-6xl relative z-10">
-        <div className="text-center mb-20" ref={titleRef}>
+        <div className="text-center mb-12 md:mb-20" ref={titleRef}>
           <div className="inline-block mb-2">
-            <span className="text-sm font-medium text-transparent bg-gradient-to-r from-lime-400 to-lime-300 bg-clip-text uppercase tracking-wider px-4 py-1.5 rounded-full border border-lime-500/20 backdrop-blur-sm">
+            <span className="text-xs md:text-sm font-medium text-transparent bg-gradient-to-r from-lime-400 to-lime-300 bg-clip-text uppercase tracking-wider px-3 md:px-4 py-1 md:py-1.5 rounded-full border border-lime-500/20 backdrop-blur-sm">
               Top Projects
             </span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+          <h2 className="text-4xl md:text-6xl font-bold mb-4 md:mb-6 text-white">
             Featured{" "}
             <span className="text-transparent bg-gradient-to-r from-lime-400 via-lime-300 to-yellow-400 bg-clip-text">
               Work
             </span>
           </h2>
-          <div className="w-32 h-1.5 mx-auto bg-gradient-to-r from-lime-400 to-yellow-400 rounded-full mb-8 relative overflow-hidden">
+          <div className="w-24 md:w-32 h-1.5 mx-auto bg-gradient-to-r from-lime-400 to-yellow-400 rounded-full mb-6 md:mb-8 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-lime-500 to-yellow-500 animate-pulse-slow"></div>
           </div>
-          <p className="text-gray-300 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-300 max-w-2xl mx-auto text-base md:text-lg px-2">
             Showcase of my recent projects and creative work that demonstrates
             my skills and expertise in web and mobile development.
           </p>
         </div>
 
-        {/* Modern Filters with Glassmorphism effect */}
-        <div className="flex justify-center mb-16" ref={filterRef}>
-          <div className="flex gap-2 p-1.5 rounded-full bg-gray-800/50 backdrop-blur-md border border-white/5 shadow-lg">
+        {/* Mobile-friendly Filters - scrollable on small screens */}
+        <div
+          className="flex justify-center mb-10 md:mb-16 overflow-x-auto pb-2 scrollbar-hide"
+          ref={filterRef}
+        >
+          <div className="flex gap-1 md:gap-2 p-1 md:p-1.5 rounded-full bg-gray-800/50 backdrop-blur-md border border-white/5 shadow-lg whitespace-nowrap">
             <button
               onClick={() => handleFilterChange("all")}
-              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-4 md:px-6 py-2 md:py-2.5 rounded-full text-xs md:text-sm font-medium transition-all duration-300 ${
                 activeFilter === "all"
                   ? "bg-gradient-to-r from-lime-500 to-lime-400 text-gray-900 shadow-md shadow-lime-500/20"
                   : "text-gray-300 hover:text-white hover:bg-white/5"
@@ -366,7 +369,7 @@ function Portfolio() {
             </button>
             <button
               onClick={() => handleFilterChange("web")}
-              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-4 md:px-6 py-2 md:py-2.5 rounded-full text-xs md:text-sm font-medium transition-all duration-300 ${
                 activeFilter === "web"
                   ? "bg-gradient-to-r from-lime-500 to-lime-400 text-gray-900 shadow-md shadow-lime-500/20"
                   : "text-gray-300 hover:text-white hover:bg-white/5"
@@ -376,7 +379,7 @@ function Portfolio() {
             </button>
             <button
               onClick={() => handleFilterChange("mobile")}
-              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-4 md:px-6 py-2 md:py-2.5 rounded-full text-xs md:text-sm font-medium transition-all duration-300 ${
                 activeFilter === "mobile"
                   ? "bg-gradient-to-r from-lime-500 to-lime-400 text-gray-900 shadow-md shadow-lime-500/20"
                   : "text-gray-300 hover:text-white hover:bg-white/5"
@@ -388,7 +391,7 @@ function Portfolio() {
         </div>
 
         <div className="relative">
-          {/* Timeline dotted line with modern animation */}
+          {/* Timeline dotted line - visible only on md screens and up */}
           <div
             ref={timelineRef}
             className="absolute left-1/2 transform -translate-x-1/2 h-full w-px z-0 hidden md:block"
@@ -400,18 +403,18 @@ function Portfolio() {
             }}
           ></div>
 
-          <div className="space-y-20 relative z-10">
+          <div className="space-y-12 md:space-y-20 relative z-10">
             {filteredItems.map((item, index) => (
               <div
                 key={item.id}
                 className={`project-card flex flex-col ${
                   index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                } items-center gap-12 relative`}
+                } items-center gap-8 md:gap-12 relative`}
                 ref={(el) => (projectsRef.current[index] = el)}
                 onMouseEnter={() => handleProjectHover(index, true)}
                 onMouseLeave={() => handleProjectHover(index, false)}
               >
-                {/* Modern Timeline dot and year */}
+                {/* Timeline dot and year - visible only on md screens and up */}
                 <div className="timeline-dot absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full z-20 hidden md:flex items-center justify-center bg-gray-800/80 backdrop-blur-md border border-lime-500/30 shadow-lg shadow-lime-500/20">
                   <div className="w-6 h-6 bg-gradient-to-br from-lime-400 to-yellow-400 rounded-full glow-effect"></div>
                 </div>
@@ -425,24 +428,24 @@ function Portfolio() {
                   {item.year}
                 </div>
 
-                {/* Modern Project Card with Glassmorphism */}
+                {/* Project Card with improved mobile styling */}
                 <div className="w-full md:w-5/12 group">
-                  <div className="bg-gray-800/30 backdrop-blur-xl rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/5 h-full transform hover:-translate-y-2 hover:border-lime-500/20">
-                    <div className="relative overflow-hidden h-64">
+                  <div className="bg-gray-800/30 backdrop-blur-xl rounded-xl md:rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/5 h-full transform hover:-translate-y-1 md:hover:-translate-y-2 hover:border-lime-500/20">
+                    <div className="relative overflow-hidden h-48 md:h-64">
                       <img
                         src={item.image}
                         alt={item.title}
                         className="project-image w-full h-full object-cover object-top transition-transform duration-700"
                       />
-                      <div className="overlay absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent opacity-0 transition-opacity duration-300 flex items-center justify-center">
+                      <div className="overlay absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent opacity-50 md:opacity-0 transition-opacity duration-300 flex items-center justify-center">
                         <a
                           href={item.link}
-                          className="project-button px-8 py-3 bg-gradient-to-r from-lime-500 to-yellow-500 text-gray-900 font-medium rounded-full transition-all duration-300 transform translate-y-20 opacity-0 hover:shadow-lg hover:shadow-lime-500/30 flex items-center group"
+                          className="project-button px-6 md:px-8 py-2.5 md:py-3 bg-gradient-to-r from-lime-500 to-yellow-500 text-gray-900 font-medium rounded-full transition-all duration-300 transform md:translate-y-20 opacity-100 md:opacity-0 hover:shadow-lg hover:shadow-lime-500/30 flex items-center group"
                         >
                           View Project
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1"
+                            className="h-4 w-4 md:h-5 md:w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1"
                             viewBox="0 0 20 20"
                             fill="currentColor"
                           >
@@ -456,17 +459,17 @@ function Portfolio() {
                       </div>
                     </div>
 
-                    <div className="p-8 flex flex-col">
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="text-transparent bg-gradient-to-r from-lime-400 to-yellow-400 bg-clip-text text-sm font-mono md:hidden">
+                    <div className="p-5 md:p-8 flex flex-col">
+                      <div className="flex items-center justify-between mb-3 md:mb-4">
+                        <div className="text-transparent bg-gradient-to-r from-lime-400 to-yellow-400 bg-clip-text text-xs md:text-sm font-mono block md:hidden">
                           {item.year}
                         </div>
                         <div className="flex items-center">
                           {item.category === "web" ? (
-                            <span className="flex items-center text-xs font-medium px-3 py-1 rounded-full bg-gray-700/50 text-lime-300 border border-lime-500/20">
+                            <span className="flex items-center text-xs font-medium px-2 md:px-3 py-0.5 md:py-1 rounded-full bg-gray-700/50 text-lime-300 border border-lime-500/20">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="h-3.5 w-3.5 mr-1"
+                                className="h-3 w-3 md:h-3.5 md:w-3.5 mr-1"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
@@ -481,10 +484,10 @@ function Portfolio() {
                               Web App
                             </span>
                           ) : (
-                            <span className="flex items-center text-xs font-medium px-3 py-1 rounded-full bg-gray-700/50 text-lime-300 border border-lime-500/20">
+                            <span className="flex items-center text-xs font-medium px-2 md:px-3 py-0.5 md:py-1 rounded-full bg-gray-700/50 text-lime-300 border border-lime-500/20">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="h-3.5 w-3.5 mr-1"
+                                className="h-3 w-3 md:h-3.5 md:w-3.5 mr-1"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
@@ -501,21 +504,26 @@ function Portfolio() {
                           )}
                         </div>
                       </div>
-                      <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-lime-400 group-hover:to-yellow-400 group-hover:bg-clip-text transition-all duration-300">
+                      <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3 text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-lime-400 group-hover:to-yellow-400 group-hover:bg-clip-text transition-all duration-300">
                         {item.title}
                       </h3>
-                      <p className="text-gray-400 mb-6 flex-grow">
+                      <p className="text-sm md:text-base text-gray-400 mb-4 md:mb-6 flex-grow line-clamp-3 md:line-clamp-none">
                         {item.desc}
                       </p>
-                      <div className="flex flex-wrap gap-2 mt-auto">
-                        {item.tags.map((tag, tagIndex) => (
+                      <div className="flex flex-wrap gap-1.5 md:gap-2 mt-auto">
+                        {item.tags.slice(0, 4).map((tag, tagIndex) => (
                           <span
                             key={tagIndex}
-                            className="px-3 py-1 text-xs font-medium rounded-full bg-gray-800/70 text-lime-300 border border-lime-500/10 hover:border-lime-500/30 transition-colors duration-300"
+                            className="px-2 md:px-3 py-0.5 md:py-1 text-xs font-medium rounded-full bg-gray-800/70 text-lime-300 border border-lime-500/10 hover:border-lime-500/30 transition-colors duration-300"
                           >
                             {tag}
                           </span>
                         ))}
+                        {item.tags.length > 4 && (
+                          <span className="px-2 md:px-3 py-0.5 md:py-1 text-xs font-medium rounded-full bg-gray-800/70 text-lime-300">
+                            +{item.tags.length - 4}
+                          </span>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -528,15 +536,15 @@ function Portfolio() {
           </div>
         </div>
 
-        <div className="text-center mt-24">
+        <div className="text-center mt-16 md:mt-24">
           <a
             href="/projects"
-            className="view-all-button inline-flex items-center px-10 py-4 bg-gradient-to-r from-lime-500 to-yellow-500 text-gray-900 font-medium rounded-full transition-all duration-300 shadow-md shadow-lime-500/20 group hover:shadow-xl hover:shadow-lime-500/30"
+            className="view-all-button inline-flex items-center px-8 md:px-10 py-3 md:py-4 bg-gradient-to-r from-lime-500 to-yellow-500 text-gray-900 font-medium rounded-full transition-all duration-300 shadow-md shadow-lime-500/20 group hover:shadow-xl hover:shadow-lime-500/30 text-sm md:text-base"
           >
             View All Projects
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1"
+              className="h-4 w-4 md:h-5 md:w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
