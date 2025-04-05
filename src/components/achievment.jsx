@@ -8,6 +8,22 @@ function Achievement() {
 
   const achievements = [
     {
+      title: "Part Time - Programmers at Codingo Pte Ltd",
+      description:
+        "Developed a mobile application for a startup, focusing on user experience and performance optimization.",
+      date: "March 2025 - Present",
+      icon: "👩‍💻",
+      color: "bg-red-500",
+    },
+    {
+      title: "Internship - Mobile Developer at PT Kawan Kerja",
+      description:
+        "Developed a mobile application for job seekers and employers, enhancing user experience and functionality.",
+      date: "March 2025 - September 2025",
+      icon: "💼",
+      color: "bg-lime-500",
+    },
+    {
       title: "Best Member in UI/UX Bootcamp",
       description:
         "Awarded as the Best Member in the UI/UX Bootcamp organized by the Google Developer Student Club at UIN Jakarta.",
@@ -23,14 +39,7 @@ function Achievement() {
       icon: "💻",
       color: "bg-purple-500",
     },
-    {
-      title: "Assistant Lecturer - Joomla",
-      description:
-        "Mentoring Joomla for 22nd batch students in Ilmu Tafsir dan Hadits Major",
-      date: "2022 - 2023",
-      icon: "🎓",
-      color: "bg-green-500",
-    },
+
     {
       title: "Freelance Web and Android Developer",
       description:
@@ -39,14 +48,7 @@ function Achievement() {
       icon: "🚀",
       color: "bg-amber-500",
     },
-    {
-      title: "Moderator Tech Talk Android - XML Native",
-      description:
-        "Organized a tech talk on XML Native part of the GDGoc UIN Jakarta initiative.",
-      date: "November 2024",
-      icon: "🎤",
-      color: "bg-red-500",
-    },
+
     {
       title: "Head of Android Development - GDGoc UIN Jakarta",
       description: "Organized a Weekly Class for Android Development.",

@@ -29,6 +29,34 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Function to handle CV download
+  const handleDownloadCV = () => {
+    // Replace this URL with the actual path to your CV file
+    const cvUrl = "/img/CV_DeVeloper_Muhammad Daffa Malik.pdf";
+
+    // Create an anchor element and trigger download
+    const link = document.createElement("a");
+    link.href = cvUrl;
+    link.download = "MuhammadDaffa-CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  // Function to scroll to portfolio section
+  const handleViewProjects = () => {
+    // Find the portfolio section element
+    const portfolioSection = document.getElementById("portfolio");
+
+    // Scroll to the portfolio section with smooth behavior
+    if (portfolioSection) {
+      portfolioSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Fallback if element not found - just scroll by ID
+      window.location.hash = "portofolio";
+    }
+  };
+
   return (
     <div className="relative w-full h-screen bg-gray-900 flex items-center justify-center overflow-hidden">
       {/* Animated particles background */}
@@ -85,12 +113,18 @@ const Hero = () => {
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-4">
-            <button className="bg-lime-400 hover:bg-lime-500 text-gray-900 font-bold py-3 px-6 rounded-md flex items-center gap-2 transition-all duration-300 shadow-lg shadow-lime-400/20">
+            <button
+              onClick={handleDownloadCV}
+              className="bg-lime-400 hover:bg-lime-500 text-gray-900 font-bold py-3 px-6 rounded-md flex items-center gap-2 transition-all duration-300 shadow-lg shadow-lime-400/20"
+            >
               Download CV
               <Download size={18} />
             </button>
 
-            <button className="border-2 border-lime-400/30 hover:border-lime-400 text-white hover:text-lime-400 font-bold py-3 px-6 rounded-md transition-all duration-300">
+            <button
+              onClick={handleViewProjects}
+              className="border-2 border-lime-400/30 hover:border-lime-400 text-white hover:text-lime-400 font-bold py-3 px-6 rounded-md transition-all duration-300"
+            >
               View Projects
             </button>
           </div>
@@ -139,7 +173,7 @@ const Hero = () => {
         <img
           src="/img/foto-ghibli.png"
           alt="Muhammad Daffa"
-          className="h-72 hidden object-cover object-top"
+          className="h-72 object-cover object-top"
         />
       </div>
     </div>

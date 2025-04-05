@@ -197,7 +197,7 @@ function ComponentsAbout() {
               {/* About text content - enhanced */}
               <div className="w-full lg:w-1/2 about-text">
                 <div className="relative inline-block mb-6">
-                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white about-title">
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 pb-2 dark:text-white about-title">
                     <span className="bg-clip-text text-transparent bg-gradient-to-r from-lime-400 to-lime-600">
                       About Me
                     </span>
@@ -205,14 +205,24 @@ function ComponentsAbout() {
                   <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-lime-400 to-lime-600 rounded-full heading-highlight"></div>
                 </div>
 
-                <p className="text-lg md:text-xl text-gray-700 dark:text-gray-200 leading-relaxed mb-8">
+                <p
+                  style={{
+                    fontFamily: "'Poppins', sans-serif",
+                  }}
+                  className="text-base md:text-lg text-gray-700 dark:text-gray-200 leading-relaxed mb-6"
+                >
                   Welcome to my online portfolio! I am a student of UIN JAKARTA
                   who is passionate about web and mobile development. On this
                   website, I share my projects in both web and mobile app
                   development.
                 </p>
 
-                <p className="text-lg md:text-xl text-gray-700 dark:text-gray-200 leading-relaxed mb-8">
+                <p
+                  style={{
+                    fontFamily: "'Poppins', sans-serif",
+                  }}
+                  className="text-base md:text-lg text-gray-700 dark:text-gray-200 leading-relaxed mb-6"
+                >
                   With my educational background in computer science and my
                   passion for designing and building engaging applications, I
                   hope you can find inspiration and see my growth as a web and
