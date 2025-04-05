@@ -400,7 +400,7 @@ function Portfolio() {
             }}
           ></div>
 
-          <div className="space-y-24 relative z-10">
+          <div className="space-y-20 relative z-10">
             {filteredItems.map((item, index) => (
               <div
                 key={item.id}

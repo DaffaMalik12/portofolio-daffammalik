@@ -145,7 +145,7 @@ const Hero = () => {
             <img
               src="/img/foto-ghibli.png"
               alt="Muhammad Daffa"
-              className="h-auto max-h-[550px] object-cover object-top z-20 relative"
+              className="h-auto max-h-[550px]  object-cover object-top z-20 relative"
             />
 
             <div className="absolute -bottom-8 -left-8 rotate-6 z-30 bg-gray-800/90 backdrop-blur-lg p-5 rounded-lg shadow-xl border-t border-gray-700 w-64 transform transition-all duration-500 hover:rotate-0 hover:scale-105">
@@ -169,11 +169,11 @@ const Hero = () => {
       </div>
 
       {/* Mobile image - only visible on mobile */}
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-0 md:hidden">
+      <div className="absolute  bottom-0 left-1/2 transform -translate-x-1/2 z-0 md:hidden">
         <img
           src="/img/foto-ghibli.png"
           alt="Muhammad Daffa"
-          className="h-72 object-cover object-top"
+          className="h-72  hidden object-cover object-top"
         />
       </div>
     </div>

@@ -211,7 +211,7 @@ function ServiceCards() {
             Need a custom solution? Let&apos;s discuss your project
             requirements.
           </p>
-          <button className="py-3 px-8 bg-lime-400  rounded-lg font-medium shadow-lg shadow-lime-500/20 hover:shadow-lime-500/40 transition-all duration-300 hover:-translate-y-1">
+          <button className="py-3 px-8 bg-lime-600  rounded-lg font-medium shadow-lg shadow-lime-500/20 hover:shadow-lime-500/40 transition-all duration-300 hover:-translate-y-1">
             Get in Touch
           </button>
         </div>
