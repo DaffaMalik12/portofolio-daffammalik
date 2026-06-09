@@ -145,15 +145,15 @@ function ComponentsAbout() {
   ];
 
   return (
-    <section id="about" className="py-16 lg:py-24 overflow-hidden">
+    <section id="about" className="py-16 lg:py-24 overflow-hidden bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="container mx-auto px-4">
         {/* Card style container with glass effect */}
-        <div className="relative rounded-3xl overflow-hidden backdrop-blur-sm bg-white/10 dark:bg-gray-900/40 shadow-2xl">
+        <div className="relative rounded-3xl overflow-hidden backdrop-blur-sm bg-gray-50/80 dark:bg-gray-900/40 shadow-xl border border-gray-200 dark:border-transparent transition-colors duration-300">
           {/* Background elements */}
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-            <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-lime-300/20 blur-3xl"></div>
-            <div className="absolute top-40 -right-20 w-80 h-80 rounded-full bg-lime-500/10 blur-3xl"></div>
-            <div className="absolute -bottom-40 left-1/3 w-72 h-72 rounded-full bg-blue-300/10 blur-3xl"></div>
+            <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-lime-300/30 dark:bg-lime-300/20 blur-3xl"></div>
+            <div className="absolute top-40 -right-20 w-80 h-80 rounded-full bg-lime-500/20 dark:bg-lime-500/10 blur-3xl"></div>
+            <div className="absolute -bottom-40 left-1/3 w-72 h-72 rounded-full bg-blue-300/20 dark:bg-blue-300/10 blur-3xl"></div>
           </div>
 
           {/* Content container */}
@@ -164,17 +164,17 @@ function ComponentsAbout() {
                 <div className="relative">
                   {/* Background blob with animation */}
                   <div className="absolute -z-10 inset-0 profile-blob">
-                    <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-gradient-to-br from-lime-300 to-lime-500 blur-2xl opacity-30 transform translate-x-10 -translate-y-10"></div>
-                    <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-gradient-to-tr from-sky-300 to-blue-500 blur-2xl opacity-20 transform -translate-x-10 translate-y-10"></div>
+                    <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-gradient-to-br from-lime-300 to-lime-500 blur-2xl opacity-40 dark:opacity-30 transform translate-x-10 -translate-y-10"></div>
+                    <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-gradient-to-tr from-sky-300 to-blue-500 blur-2xl opacity-30 dark:opacity-20 transform -translate-x-10 translate-y-10"></div>
                   </div>
 
                   {/* Decorative ring */}
-                  <div className="absolute inset-0 rounded-full border-2 border-dashed border-lime-400/40 animate-spin-slow"></div>
+                  <div className="absolute inset-0 rounded-full border-2 border-dashed border-lime-500/40 dark:border-lime-400/40 animate-spin-slow"></div>
 
                   {/* Image container with advanced effects */}
                   <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-xl profile-image">
                     {/* Border glow effect */}
-                    <div className="absolute inset-0 rounded-full border-2 border-lime-300 z-20 pointer-events-none"></div>
+                    <div className="absolute inset-0 rounded-full border-2 border-lime-400 dark:border-lime-300 z-20 pointer-events-none"></div>
 
                     {/* Actual image */}
                     <img
@@ -184,12 +184,12 @@ function ComponentsAbout() {
                     />
 
                     {/* Overlay gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-lime-400/30 via-transparent to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-lime-400/20 dark:from-lime-400/30 via-transparent to-transparent"></div>
                   </div>
                 </div>
 
                 {/* Experience badge */}
-                <div className="absolute bottom-0 right-0 lg:bottom-10 lg:right-10 bg-gradient-to-r from-lime-400 to-lime-500 text-white px-4 py-2 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300">
+                <div className="absolute bottom-0 right-0 lg:bottom-10 lg:right-10 bg-gradient-to-r from-lime-500 to-lime-600 dark:from-lime-400 dark:to-lime-500 text-white px-4 py-2 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300">
                   <span className="font-bold">Fullstack Developer</span>
                 </div>
               </div>
@@ -197,19 +197,19 @@ function ComponentsAbout() {
               {/* About text content - enhanced */}
               <div className="w-full lg:w-1/2 about-text">
                 <div className="relative inline-block mb-6">
-                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 pb-2 dark:text-white about-title">
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-lime-400 to-lime-600">
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white pb-2 about-title transition-colors duration-300">
+                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-lime-500 to-lime-700 dark:from-lime-400 dark:to-lime-600">
                       About Me
                     </span>
                   </h3>
-                  <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-lime-400 to-lime-600 rounded-full heading-highlight"></div>
+                  <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-lime-500 to-lime-700 dark:from-lime-400 dark:to-lime-600 rounded-full heading-highlight"></div>
                 </div>
 
                 <p
                   style={{
                     fontFamily: "'Poppins', sans-serif",
                   }}
-                  className="text-base md:text-lg text-gray-700 dark:text-gray-200 leading-relaxed mb-6"
+                  className="text-base md:text-lg text-gray-700 dark:text-gray-200 leading-relaxed mb-6 transition-colors duration-300"
                 >
                   Welcome to my online portfolio! I am a student of UIN JAKARTA
                   who is passionate about web and mobile development. On this
@@ -221,7 +221,7 @@ function ComponentsAbout() {
                   style={{
                     fontFamily: "'Poppins', sans-serif",
                   }}
-                  className="text-base md:text-lg text-gray-700 dark:text-gray-200 leading-relaxed mb-6"
+                  className="text-base md:text-lg text-gray-700 dark:text-gray-200 leading-relaxed mb-6 transition-colors duration-300"
                 >
                   With my educational background in computer science and my
                   passion for designing and building engaging applications, I
@@ -231,7 +231,7 @@ function ComponentsAbout() {
 
                 {/* Social icons with brand colors */}
                 <div className="social-icons-container">
-                  <h4 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4">
+                  <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-300 mb-4 transition-colors duration-300">
                     Connect With Me
                   </h4>
                   <div className="flex flex-wrap gap-4">
@@ -253,7 +253,7 @@ function ComponentsAbout() {
                               ? "bg-gradient-to-br " +
                                 social.color +
                                 " text-white scale-110 shadow-lg"
-                              : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"
+                              : "bg-white dark:bg-gray-800 shadow-sm border border-gray-200 dark:border-transparent text-gray-600 dark:text-gray-400"
                           }
                         `}
                         >

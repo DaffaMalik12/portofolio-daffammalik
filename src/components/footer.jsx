@@ -97,7 +97,7 @@ function Footer() {
   return (
     <footer
       ref={footerRef}
-      className="relative mt-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white"
+      className="relative mt-20 bg-gradient-to-r from-gray-100 to-white dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:text-white transition-colors duration-300"
     >
       {/* Wave SVG top decoration */}
       <div className="absolute top-0 left-0 w-full transform -translate-y-full">
@@ -105,10 +105,10 @@ function Footer() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
           preserveAspectRatio="none"
-          className="w-full h-16 md:h-24"
+          className="w-full h-16 md:h-24 text-gray-100 dark:text-gray-900 transition-colors duration-300"
         >
           <path
-            fill="#111827"
+            fill="currentColor"
             fillOpacity="1"
             d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,218.7C672,203,768,149,864,149.3C960,149,1056,203,1152,213.3C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
           ></path>
@@ -120,31 +120,31 @@ function Footer() {
           {/* Brand & Copyright */}
           <div className="flex flex-col space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-lime-600 rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-lime-500 rounded-lg flex items-center justify-center">
                 <img src="/img/logo.png" alt="" />
               </div>
               <h2 className="text-xl font-bold">Muhammad Daffa</h2>
             </div>
-            <p className="text-gray-400 max-w-md">
+            <p className="text-gray-600 dark:text-gray-400 max-w-md transition-colors duration-300">
               Passionate developer creating elegant solutions for complex
               problems. Building modern web and mobile experiences.
             </p>
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-500 text-sm transition-colors duration-300">
               © {new Date().getFullYear()} All rights reserved
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 relative inline-block">
+            <h3 className="text-lg font-semibold mb-4 relative inline-block text-gray-900 dark:text-white transition-colors duration-300">
               Quick Links
-              <span className="absolute -bottom-1 left-0 w-12 h-1 bg-lime-600 rounded-full"></span>
+              <span className="absolute -bottom-1 left-0 w-12 h-1 bg-lime-500 rounded-full"></span>
             </h3>
-            <ul className="space-y-2 text-gray-400">
+            <ul className="space-y-2 text-gray-600 dark:text-gray-400 transition-colors duration-300">
               <li>
                 <a
                   href="#home"
-                  className="hover:text-lime-400 transition-colors duration-300 flex items-center"
+                  className="hover:text-lime-600 dark:hover:text-lime-400 transition-colors duration-300 flex items-center"
                 >
                   <span className="mr-2 text-lime-500">›</span> Home
                 </a>
@@ -152,7 +152,7 @@ function Footer() {
               <li>
                 <a
                   href="#about"
-                  className="hover:text-lime-400 transition-colors duration-300 flex items-center"
+                  className="hover:text-lime-600 dark:hover:text-lime-400 transition-colors duration-300 flex items-center"
                 >
                   <span className="mr-2 text-lime-500">›</span> About
                 </a>
@@ -160,25 +160,25 @@ function Footer() {
               <li>
                 <a
                   href="#portofolio"
-                  className="hover:text-lime-400 transition-colors duration-300 flex items-center"
+                  className="hover:text-lime-600 dark:hover:text-lime-400 transition-colors duration-300 flex items-center"
                 >
                   <span className="mr-2 text-lime-500">›</span> Portfolio
                 </a>
               </li>
               <li>
                 <a
-                  href="#skills"
-                  className="hover:text-lime-400 transition-colors duration-300 flex items-center"
+                  href="#services"
+                  className="hover:text-lime-600 dark:hover:text-lime-400 transition-colors duration-300 flex items-center"
                 >
-                  <span className="mr-2 text-lime-500">›</span> Skills
+                  <span className="mr-2 text-lime-500">›</span> Services
                 </a>
               </li>
               <li>
                 <a
-                  href="#contact"
-                  className="hover:text-lime-400 transition-colors duration-300 flex items-center"
+                  href="#achievement"
+                  className="hover:text-lime-600 dark:hover:text-lime-400 transition-colors duration-300 flex items-center"
                 >
-                  <span className="mr-2 text-lime-500">›</span> Contact
+                  <span className="mr-2 text-lime-500">›</span> Experience
                 </a>
               </li>
             </ul>
@@ -186,11 +186,11 @@ function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 relative inline-block">
+            <h3 className="text-lg font-semibold mb-4 relative inline-block text-gray-900 dark:text-white transition-colors duration-300">
               Contact Me
-              <span className="absolute -bottom-1 left-0 w-12 h-1 bg-lime-600 rounded-full"></span>
+              <span className="absolute -bottom-1 left-0 w-12 h-1 bg-lime-500 rounded-full"></span>
             </h3>
-            <ul className="space-y-3 text-gray-400">
+            <ul className="space-y-3 text-gray-600 dark:text-gray-400 transition-colors duration-300">
               <li className="flex items-start">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -253,7 +253,7 @@ function Footer() {
         </div>
 
         {/* Social & Copyright on Mobile */}
-        <div className="mt-10 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+        <div className="mt-10 pt-8 border-t border-gray-200 dark:border-gray-700 flex flex-col md:flex-row justify-between items-center transition-colors duration-300">
           <div className="flex space-x-4 mb-4 md:mb-0">
             {socialLinks.map((social, index) => (
               <a
@@ -261,7 +261,7 @@ function Footer() {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-lime-600 text-gray-300 hover:text-white transition-all duration-300 transform hover:-translate-y-1"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-800 hover:bg-lime-500 dark:hover:bg-lime-600 text-gray-600 dark:text-gray-300 hover:text-white transition-all duration-300 transform hover:-translate-y-1"
                 aria-label={social.name}
               >
                 {social.icon}
@@ -269,9 +269,9 @@ function Footer() {
             ))}
           </div>
 
-          <p className="text-gray-500 text-sm text-center md:text-right">
+          <p className="text-gray-500 text-sm text-center md:text-right transition-colors duration-300">
             Designed & Developed by{" "}
-            <span className="text-lime-500">Muhammad Daffa</span>
+            <span className="text-lime-600 dark:text-lime-500">Muhammad Daffa</span>
           </p>
         </div>
       </div>

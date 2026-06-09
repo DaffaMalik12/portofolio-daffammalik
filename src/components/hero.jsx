@@ -32,12 +32,12 @@ const Hero = () => {
   // Function to handle CV download
   const handleDownloadCV = () => {
     // Replace this URL with the actual path to your CV file
-    const cvUrl = "/img/CV_DeVeloper_Muhammad Daffa Malik.pdf";
+    const cvUrl = "/img/CV_Muhammad Daffa Malik_2026.pdf";
 
     // Create an anchor element and trigger download
     const link = document.createElement("a");
     link.href = cvUrl;
-    link.download = "MuhammadDaffa-CV.pdf";
+    link.download = "CV_Muhammad Daffa Malik_2026.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -58,7 +58,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative w-full h-screen bg-gray-900 flex items-center justify-center overflow-hidden">
+    <div className="relative w-full h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center overflow-hidden transition-colors duration-300">
       {/* Animated particles background */}
       <div className="absolute inset-0">
         {[...Array(20)].map((_, i) => (
@@ -77,7 +77,7 @@ const Hero = () => {
       </div>
 
       {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-800/80 to-gray-900 opacity-90"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-gray-50 via-gray-100/80 to-gray-50 dark:from-gray-900 dark:via-gray-800/80 dark:to-gray-900 opacity-90 transition-colors duration-300"></div>
 
       {/* Content container */}
       <div className="relative z-10 max-w-6xl w-full px-4 mx-auto grid md:grid-cols-2 gap-8 items-center">
@@ -88,25 +88,25 @@ const Hero = () => {
           }`}
         >
           <div className="mb-2 flex items-center">
-            <div className="h-1 w-12 bg-lime-400 mr-4"></div>
-            <p className="text-lime-400 font-medium text-sm tracking-widest">
+            <div className="h-1 w-12 bg-lime-500 mr-4"></div>
+            <p className="text-lime-600 dark:text-lime-400 font-medium text-sm tracking-widest transition-colors duration-300">
               WELCOME TO MY PORTFOLIO
             </p>
           </div>
 
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-gray-900 dark:text-white transition-colors duration-300">
             I&apos;m{" "}
-            <span className="text-lime-400 relative">
+            <span className="text-lime-500 dark:text-lime-400 relative transition-colors duration-300">
               Muhammad Daffa
               <span className="absolute -bottom-2 left-0 h-1 w-full bg-lime-400/30"></span>
             </span>
           </h1>
 
-          <h2 className="text-2xl md:text-3xl text-white font-bold mb-6">
+          <h2 className="text-2xl md:text-3xl text-gray-800 dark:text-white font-bold mb-6 transition-colors duration-300">
             Full Stack Developer
           </h2>
 
-          <p className="text-gray-300 mb-8 max-w-md">
+          <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-md transition-colors duration-300">
             Passionate about creating beautiful, functional, and user-friendly
             applications with modern technologies.
           </p>
@@ -115,7 +115,7 @@ const Hero = () => {
           <div className="flex flex-wrap gap-4">
             <button
               onClick={handleDownloadCV}
-              className="bg-lime-400 hover:bg-lime-500 text-gray-900 font-bold py-3 px-6 rounded-md flex items-center gap-2 transition-all duration-300 shadow-lg shadow-lime-400/20"
+              className="bg-lime-500 hover:bg-lime-600 text-white dark:text-gray-900 font-bold py-3 px-6 rounded-md flex items-center gap-2 transition-all duration-300 shadow-lg shadow-lime-500/30"
             >
               Download CV
               <Download size={18} />
@@ -123,7 +123,7 @@ const Hero = () => {
 
             <button
               onClick={handleViewProjects}
-              className="border-2 border-lime-400/30 hover:border-lime-400 text-white hover:text-lime-400 font-bold py-3 px-6 rounded-md transition-all duration-300"
+              className="border-2 border-lime-500/50 dark:border-lime-400/30 hover:border-lime-600 dark:hover:border-lime-400 text-gray-700 dark:text-white hover:text-lime-600 dark:hover:text-lime-400 font-bold py-3 px-6 rounded-md transition-all duration-300"
             >
               View Projects
             </button>
@@ -139,8 +139,8 @@ const Hero = () => {
                 : "translate-y-10 opacity-0"
             }`}
           >
-            <div className="absolute -top-16 -left-16 w-64 h-64 rounded-full border-2 border-dashed border-lime-400/20 animate-spin-slow"></div>
-            <div className="absolute -bottom-16 -right-16 w-48 h-48 rounded-full border-2 border-dashed border-lime-400/20 animate-spin-slow"></div>
+            <div className="absolute -top-16 -left-16 w-64 h-64 rounded-full border-2 border-dashed border-lime-400/30 dark:border-lime-400/20 animate-spin-slow"></div>
+            <div className="absolute -bottom-16 -right-16 w-48 h-48 rounded-full border-2 border-dashed border-lime-400/30 dark:border-lime-400/20 animate-spin-slow"></div>
 
             <img
               src="/img/foto-ghibli.png"
@@ -148,19 +148,22 @@ const Hero = () => {
               className="h-auto max-h-[550px]  object-cover object-top z-20 relative"
             />
 
-            <div className="absolute -bottom-8 -left-8 rotate-6 z-30 bg-gray-800/90 backdrop-blur-lg p-5 rounded-lg shadow-xl border-t border-gray-700 w-64 transform transition-all duration-500 hover:rotate-0 hover:scale-105">
-              <p className="text-lime-400 font-medium mb-3 flex items-center gap-2">
-                <span className="w-2 h-2 bg-lime-400 rounded-full animate-pulse"></span>
+            <div className="absolute -bottom-8 -left-8 rotate-6 z-30 bg-white/90 dark:bg-gray-800/90 backdrop-blur-lg p-5 rounded-lg shadow-xl border-t border-gray-100 dark:border-gray-700 w-64 transform transition-all duration-500 hover:rotate-0 hover:scale-105">
+              <p className="text-lime-600 dark:text-lime-400 font-medium mb-3 flex items-center gap-2 transition-colors duration-300">
+                <span className="w-2 h-2 bg-lime-500 rounded-full animate-pulse"></span>
                 MY EXPERTISE
               </p>
 
               {displayedSkills.map((skill, index) => (
-                <p key={index} className="text-white text-sm mb-1">
+                <p
+                  key={index}
+                  className="text-gray-800 dark:text-white text-sm mb-1 transition-colors duration-300"
+                >
                   {skill}
                 </p>
               ))}
 
-              <p className="text-gray-400 text-xs mt-2">
+              <p className="text-gray-500 dark:text-gray-400 text-xs mt-2 transition-colors duration-300">
                 {skills.length - 3}+ more
               </p>
             </div>
