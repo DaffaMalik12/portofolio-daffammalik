@@ -299,10 +299,10 @@ function Navbar() {
         {/* Mobile Menu */}
         <div
           id="mobile-menu"
-          className={`lg:hidden transition-all duration-300 ease-in-out ${
+          className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden ${
             mobileMenuOpen
-              ? "opacity-100 mt-4 transform translate-y-0"
-              : "opacity-0 mt-0 pointer-events-none transform -translate-y-4"
+              ? "opacity-100 max-h-[600px] mt-4 transform translate-y-0"
+              : "opacity-0 max-h-0 mt-0 pointer-events-none transform -translate-y-4"
           }`}
         >
           <div className="py-2 px-1 bg-white dark:bg-gray-900 rounded-xl shadow-xl border border-gray-200 dark:border-gray-800">
